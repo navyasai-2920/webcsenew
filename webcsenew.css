@@ -1,0 +1,199 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR39yiEnEIjbbyyujGVX1rD6an0cGW-ubFyUg&s') no-repeat center center fixed; /* Full-screen background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    color: #f8f9fa; /* Light text for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header */
+header {
+    padding: 20px;
+    text-align: center;
+    font-size: 32px; /* Larger, elegant font size */
+    font-weight: 700; /* Bold header */
+    color: #ffd700; /* Warm gold color for header */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow to pop out against bright backgrounds */
+    letter-spacing: 2px; /* Adds spacing for elegance */
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #f8f9fa; /* Light text for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Gentle shadow for readability */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold hover effect for navigation */
+}
+
+/* Main Content */
+.content {
+    margin: 0 auto;
+    text-align: center;
+    color: #f8f9fa;
+    padding: 20px;
+    max-width: 85%;
+}
+
+h2, h3 {
+    font-family: 'Merriweather', serif; /* Elegant serif font for headings */
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffd700; /* Gold accent for headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Enhanced shadow for emphasis */
+}
+
+p, ul {
+    font-size: 18px;
+    font-weight: 300; /* Light weight for easy reading */
+    line-height: 1.8;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Soft shadow to ensure contrast */
+}
+
+/* Inputs and Buttons */
+input[type="text"],
+input[type="date"],
+select {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Thin white border */
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4); /* Slightly transparent dark background for blending */
+    color: #f8f9fa;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Gentle shadow for readability */
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
+}
+
+button {
+    background: linear-gradient(90deg, #ffa500, #ff4500); /* Gradient orange-red button */
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff4500, #ffa500); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Task List */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.task-item {
+    font-size: 20px;
+    font-weight: 400; /* Regular weight for task items */
+    color: #ffffff;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for blending */
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.notification.success {
+    background-color: rgba(50, 205, 50, 0.8); /* Semi-transparent green for success */
+    color: #ffffff;
+}
+
+.notification.error {
+    background-color: rgba(220, 20, 60, 0.8); /* Semi-transparent crimson for error */
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        width: 100%; /* Full-width inputs on small screens */
+    }
+
+    h2, h3 {
+        font-size: 1.8em; /* Smaller headings for smaller devices */
+    }
+}
+/* Partition Styling */
+.partition {
+    margin: 20px auto;
+    border-top: 2px solid rgba(255, 255, 255, 0.3); /* Subtle semi-transparent line */
+    width: 80%; /* Center the divider */
+    max-width: 800px;
+}
+
+/* Styling for Welcome Section */
+.welcome-section {
+    margin: 20px 0;
+    text-align: center;
+    color: #ffd700; /* Golden color for a welcoming vibe */
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Enhanced shadow for emphasis */
+}
+
+/* Styling for Options Section */
+.options-section {
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff; /* White text for options */
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle shadow for readability */
+}

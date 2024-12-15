@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webcsenew.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Task Manager</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-section="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" class="nav-link" data-section="todo"><i class="fas fa-list"></i> To-Do List</a></li>
+                <li><a href="#" class="nav-link" data-section="calendar"><i class="fas fa-calendar"></i> Calendar</a></li>
+                <li><a href="#" class="nav-link" data-section="settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#" class="nav-link" data-section="help"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="notification" class="notification"></div>
+
+    <div id="home" class="content">
+        <h2>Welcome to Task Manager!</h2>
+        <p>This application helps you manage your tasks and important dates efficiently. You can create a to-do list, mark important dates on the calendar, and customize your experience through the settings.</p>
+        <h3>Features:</h3>
+        <ul>
+            <li><strong>To-Do List:</strong> Keep track of tasks you need to complete.</li>
+            <li><strong>Calendar:</strong> Mark important dates and reminders.</li>
+            <li><strong>Settings:</strong> Personalize your app experience.</li>
+            <li><strong>Help:</strong> Get assistance on how to use the app.</li>
+        </ul>
+        <p>Get started by navigating to the To-Do List or Calendar sections!</p>
+    </div>
+
+    <div id="todo" class="content" style="display: none;">
+        <h2>To-Do List</h2>
+        <p>Here, you can add tasks you need to accomplish.</p>
+        <input type="text" id="taskInput" placeholder="Add a new task" aria-label="New task input">
+        <button id="addTaskBtn" aria-label="Add task button">Add Task</button>
+        <h3>Your Tasks:</h3>
+        <ul id="taskList"></ul>
+    </div>
+
+    <div id="calendar" class="content" style="display: none;">
+        <h2>Calendar</h2>
+        <p>Today's date is: <span id="todayDate"></span></p>
+        <p>Mark important dates to remember!</p>
+        <input type="date" id="importantDateInput" aria-label="Important date input">
+        <button id="markImportantBtn" aria-label="Mark important date button">Mark Important Date</button>
+        <h3>Important Dates:</h3>
+        <ul id="importantDatesList"></ul>
+    </div>
+
+    <div id="settings" class="content" style="display: none;">
+        <h2>Settings</h2>
+        <p>Customize your app's appearance and functionality.</p>
+        <div class="setting-option">
+            <label for="themeSelect">Select Theme:</label>
+            <select id="themeSelect" aria-label="Theme selection">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div class="setting-option">
+            <label for="fontSizeSelect">Font Size:</label>
+            <select id="fontSizeSelect" aria-label="Font size selection">
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+        <button id="resetBtn" aria-label="Reset to default settings button">Reset to Default</button>
+        <button id="saveSettingsBtn" aria-label="Save settings button">Save Settings</button>
+    </div>
+
+    <div id="help" class="content" style="display: none;">
+        <h2>Help Section</h2>
+        <p>If you need assistance using this Task Manager, here's how to get started:</p>
+        <ul>
+            <li><strong>To-Do List:</strong> Enter a task in the input box and click "Add Task". You can check off completed tasks.</li>
+            <li><strong>Calendar:</strong> Use the date picker to select an important date and click "Mark Important Date" to save it.</li>
+            <li><strong>Settings:</strong> Customize the app's appearance. Click "Save Settings" to apply changes.</li>
+            <li><strong>Feedback:</strong> Your feedback is important! Please share any suggestions or issues.</li>
+        </ul>
+    </div>
+    
+  
+<script src="webcsenew.js"></script>
+</body>
+</html>
